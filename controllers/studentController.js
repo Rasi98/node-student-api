@@ -23,8 +23,8 @@ export const getAllStudents = asyncHandler(async (req, res) => {
 
 export const getStudent = asyncHandler(async (req, res) => {
   try {
-    const { id } = req.params;
-    const student = await studentModel.findById(id);
+    const { name } = req.params;
+    const student = await studentModel.find({ name: name });
     res.status(200).json(student);
   } catch (error) {
     res.status(500);

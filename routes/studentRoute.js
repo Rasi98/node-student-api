@@ -9,7 +9,7 @@ import {
 const studentRouter = express.Router();
 
 studentRouter.get("/", getAllStudents);
-studentRouter.get("/:id", getStudent);
+studentRouter.get("/:name", getStudent);
 studentRouter.post("/addStudent", addStudent);
 studentRouter.put("/:id", updateStudent);
 studentRouter.delete("/:id", deleteStudent);
